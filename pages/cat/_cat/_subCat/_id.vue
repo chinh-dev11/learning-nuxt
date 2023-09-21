@@ -7,6 +7,8 @@ export default {
 
 <template>
   <div>
-    <h1>ID: {{ $route.params.id }}</h1>
+    <h1>ID: {{ $route.params }}</h1>
+    <!-- url: http://localhost:3000/cat/subcategory/id/1 -->
+    <!-- params: ID: { "cat": "subcategory", "subCat": "id", "id": "1" } -->
   </div>
 </template>
