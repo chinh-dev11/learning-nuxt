@@ -20,6 +20,7 @@ module.exports = {
         // ignores: ['pre', 'textarea', ...INLINE_ELEMENTS]
         ignores: ['nuxt-link']
       }
-    ]
+    ],
+    'space-before-function-paren': ['error', 'never']
   }
 }
