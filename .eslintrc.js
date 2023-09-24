@@ -21,6 +21,18 @@ module.exports = {
         ignores: ['nuxt-link']
       }
     ],
-    'space-before-function-paren': ['error', 'never']
+    'space-before-function-paren': ['error', 'never'],
+    'vue/html-self-closing': [
+      'error',
+      {
+        html: {
+          void: 'always' // allow self-closing on HTML void elements with no attributes
+          // normal: 'never', // disallow self-closing on non-void elements with no children
+          // component: 'any' // don't enforce self-closing on custom components
+        }
+        // svg: 'always',
+        // math: 'always'
+      }
+    ]
   }
 }
