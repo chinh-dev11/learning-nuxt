@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import 'floating-vue/dist/style.css'
 
 export default {
@@ -30,6 +31,13 @@ export default {
   data: () => ({
     rivers: []
   }),
+  async fetch() {
+    // const apiUrl = 'https://api.nuxtjs.dev/rivers'
+    const apiUrl = 'https://api.coindesk.com/v1/bpi/currentprice1.json'
+    const res = await axios.get(apiUrl)
+    console.log('>>>$http - res', res)
+    // this.rivers = res
+  },
   /* async fetch() {
     const apiUrl = 'https://api.nuxtjs.dev/rivers'
     const res = await this.$http.$get(apiUrl)

@@ -21,7 +21,16 @@ module.exports = {
         ignores: ['nuxt-link']
       }
     ],
-    'space-before-function-paren': ['error', 'never'],
+    // 'space-before-function-paren': ['error', 'never'],
+    // or
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'always',
+        named: 'never',
+        asyncArrow: 'always'
+      }
+    ],
     'vue/html-self-closing': [
       'error',
       {
