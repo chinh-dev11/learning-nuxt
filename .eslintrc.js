@@ -33,6 +33,7 @@ module.exports = {
         // svg: 'always',
         // math: 'always'
       }
-    ]
+    ],
+    'arrow-parens': ['error', 'always']
   }
 }

@@ -1,16 +1,22 @@
 <template>
   <!-- <Tutorial /> -->
   <div>
-    <h1>Rivers</h1>
-    <ul>
+    <!-- <h1>Rivers</h1> -->
+    <!-- <ul>
       <li v-for="(river, index) in rivers" :key="`river-${index}`">
         {{ river.title }}
       </li>
-    </ul>
+    </ul> -->
+    <h1>Using floating-vue plugin</h1>
+    <button v-tooltip="'this is our button with tooltip'">
+      Button with tooltip
+    </button>
   </div>
 </template>
 
 <script>
+import 'floating-vue/dist/style.css'
+
 export default {
   name: 'IndexPage',
   /* async asyncData({ $http }) {
@@ -24,12 +30,12 @@ export default {
   data: () => ({
     rivers: []
   }),
-  async fetch() {
+  /* async fetch() {
     const apiUrl = 'https://api.nuxtjs.dev/rivers'
     const res = await this.$http.$get(apiUrl)
     // console.log('>>>$http - res', res)
     this.rivers = res
-  },
+  }, */
   // SEO and meta tags
   // locally (in a component)
   // globally (in head section in nuxt.config.js)
