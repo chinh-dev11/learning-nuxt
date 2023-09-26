@@ -1,16 +1,37 @@
 <template>
   <!-- <Tutorial /> -->
   <div>
-    <!-- <h1>Rivers</h1> -->
-    <!-- <ul>
-      <li v-for="(river, index) in rivers" :key="`river-${index}`">
-        {{ river.title }}
+    <h1>Rivers</h1>
+    <ul>
+      <li
+        v-for="(river, index) in rivers"
+        :key="`river-${index}`"
+      >
+        <h4>{{ river.title }}</h4>
+        <NuxtImg
+          :src="river.image"
+          :alt="river.title"
+          format="webp"
+          loading="lazy"
+          placeholder="loading..."
+          sizes="100vw sm:50vw md:300px lg:500px"
+        />
+        <!-- <NuxtImg
+          :src="river.image"
+          :alt="river.title"
+          format="webp"
+          loading="lazy"
+          placeholder="loading..."
+          fit="cover"
+          width="300"
+          height="200"
+        /> -->
       </li>
-    </ul> -->
-    <h1>Using floating-vue plugin</h1>
+    </ul>
+    <!-- <h1>Using floating-vue plugin</h1>
     <button v-tooltip="'this is our button with tooltip'">
       Button with tooltip
-    </button>
+    </button> -->
   </div>
 </template>
 
@@ -32,11 +53,10 @@ export default {
     rivers: []
   }),
   async fetch() {
-    // const apiUrl = 'https://api.nuxtjs.dev/rivers'
-    const apiUrl = 'https://api.coindesk.com/v1/bpi/currentprice1.json'
+    const apiUrl = 'https://api.nuxtjs.dev/rivers'
     const res = await axios.get(apiUrl)
     console.log('>>>$http - res', res)
-    // this.rivers = res
+    this.rivers = res.data
   },
   /* async fetch() {
     const apiUrl = 'https://api.nuxtjs.dev/rivers'
