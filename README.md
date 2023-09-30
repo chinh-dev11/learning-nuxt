@@ -1,4 +1,5 @@
 # learning-nuxt
+Learning from Linkedin Learning course: https://www.linkedin.com/learning/learning-nuxt-js/learn-nuxt-for-complete-application-development
 
 ## Build Setup
 
